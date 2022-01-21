@@ -1,12 +1,12 @@
 package com.linecomarision;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class lineComparision {
 	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);	
 		System.out.println("Welcome to Line Comparison Computation !!");
 
-		Scanner sc=new Scanner(System.in);
 		System.out.print("plese Enter line co-ordinates x1=");
 		int x1=sc.nextInt();
 		System.out.print("plese Enter line co-ordinates x2=");
@@ -15,9 +15,33 @@ public class lineComparision {
 		int y1=sc.nextInt();
 		System.out.print("plese Enter line co-ordinates x2=");
 		int y2=sc.nextInt();
-		double length_of_line=Math.sqrt((x2-x1)^2+(y2-y1)^2);
+		double length_of_line1=Math.sqrt((x2-x1)^2+(y2-y1)^2);
+
+		System.out.println("Length of The line is="+length_of_line1);
+
+		System.out.print("plese Enter line co-ordinates x3=");
+		int x3=sc.nextInt();
+		System.out.print("plese Enter line co-ordinates x4=");
+		int x4=sc.nextInt();
+		System.out.print("plese Enter line co-ordinates y3=");
+		int y3=sc.nextInt();
+		System.out.print("plese Enter line co-ordinates x4=");
+		int y4=sc.nextInt();
+		double length_of_line2=Math.sqrt((x4-x3)^2+(y4-y3)^2);
+		System.out.println("Length of The line is="+length_of_line2);
 		sc.close();
-		System.out.println("Length of The line is="+length_of_line);
+
+		Integer L1=new Integer((int) length_of_line1);
+		Integer L2=new Integer((int) length_of_line2);
+		
+		if(L1.equals(L2))
+			{
+				System.out.println("both lines are equal");
+			}
+		else
+			{
+				System.out.println("both lines are not equal");
+			}
 
 	}
 }
