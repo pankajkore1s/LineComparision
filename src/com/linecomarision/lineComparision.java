@@ -43,6 +43,20 @@ public class lineComparision {
 				System.out.println("both lines are not equal");
 			}
 
+		int eq=L1.compareTo(L2);
+		System.out.println(eq);
+		if(eq==0)
+		{
+			System.out.println("both lines are equal");
+		}
+		else if(eq>0)
+		{
+			System.out.println("Line1 is greater than line2");
+		}
+		else
+		{
+			System.out.println("Line2 is greater than Line1");
+		}
 	}
 }
 
